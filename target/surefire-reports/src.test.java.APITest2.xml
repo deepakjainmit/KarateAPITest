@@ -1,0 +1,9 @@
+<testsuite failures="0" name="src/test/java/APITest2.feature" skipped="0" tests="1" time="3.610841">
+  <testcase classname="src.test.java.APITest2" name="to test other feature call" time="3.610841">
+    <system-out>* def myfeature = call read('APITest.feature') ............................ passed
+* def res = myfeature.UserResponse ........................................ passed
+* def name = myfeature.name ............................................... passed
+Then print 'response-----', res ........................................... passed
+And print 'name---', name ................................................. passed</system-out>
+  </testcase>
+</testsuite>

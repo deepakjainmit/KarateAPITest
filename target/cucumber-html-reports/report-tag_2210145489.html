@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<script src="js/jquery.min.js"></script>
+<script src="js/jquery.tablesorter.min.js"></script>
+<script src="js/Chart.min.js"></script>
+<script src="js/moment.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+
+<link rel="stylesheet" href="css/bootstrap.min.css" type="text/css"/>
+<link rel="stylesheet" href="css/cucumber.css" type="text/css"/>
+<link rel="stylesheet" href="css/font-awesome.min.css"/>
+<link rel="shortcut icon" href="images/favicon.png"/>
+
+<script>
+$(document).ready(function() {
+    // this will tell tablesorter to try looking for the data-value attribute
+    // if present, it'll sort by that instead
+    // otherwise, it'll sort by the text content of the table cell
+    $("#tablesorter").tablesorter({
+        textAttribute: 'data-value',
+        // ignores the first row of the header, the 'scenario', 'steps', since
+        // sorting those doesn't make sense
+        selectorHeaders: '> thead tr:not(.dont-sort) th',
+        // use a stable sort
+        sortStable: true
+    });
+});
+</script>
+
+
+
+
+
+
+
+
+
+
+
+<title>Cucumber Reports  - Tag: @test</title>
+
+</head>
+<body>
+
+<nav class="navbar navbar-default navbar-fixed-top" id="navigation">
+  <div class="container-fluid">
+    <div class="collapse navbar-collapse">
+      <p class="navbar-text navbar-left">Cucumber Report</p>
+      <ul class="nav navbar-nav navbar-right">
+        <li role="presentation" ><a href="overview-features.html">Features</a></li>
+        <li role="presentation" ><a href="overview-tags.html">Tags</a></li>
+        <li role="presentation" ><a href="overview-steps.html">Steps</a></li>
+        <li role="presentation" ><a href="overview-failures.html">Failures</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+<div class="container-fluid">
+  <div class="col-md-5 col-md-offset-1">
+
+<table class="table table-bordered" id="build-info">
+  <thead>
+    <tr>
+      <th>Project</th>
+      <th>Date</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr class="info">
+      <td>APITest</td>
+      <td>11 Jun 2020, 13:37</td>
+    </tr>
+  </tbody>
+</table>
+
+  </div>
+  <div class="col-md-3 col-md-offset-2">
+  </div>
+</div>
+
+
+<div id="report-lead" class="container-fluid">
+  <div class="col-md-10 col-md-offset-1">
+    <h2>Tag Report</h2>
+  </div>
+</div>
+
+
+<div class="container-fluid" id="report">
+  <div class="row">
+    <div class="col-md-10 col-md-offset-1">
+      <table class="stats-table">
+
+
+<thead>
+  <tr class="header dont-sort">
+      <th></th>
+    <th colspan="6">Steps</th>
+    <th colspan="3">Scenarios</th>
+    <th colspan="2">Features</th>
+  </tr>
+  <tr>
+    <th>Tag</th>
+    <th class="passed">Passed</th>
+    <th class="failed">Failed</th>
+    <th class="skipped">Skipped</th>
+    <th class="pending">Pending</th>
+    <th class="undefined">Undefined</th>
+    <th class="total">Total</th>
+
+    <th class="passed">Passed</th>
+    <th class="failed">Failed</th>
+    <th class="total">Total</th>
+
+    <th>Duration</th>
+    <th>Status</th>
+  </tr>
+</thead>
+
+
+        <tbody>
+        <tr>
+          <td class="tagname">@test</td>
+          <td      class="passed"    >7</td>
+          <td >0</td>
+          <td >0</td>
+          <td >0</td>
+          <td >0</td>
+          <td class="total">7</td>
+
+          <td  class="passed"    >1</td>
+          <td >0</td>
+          <td class="total">1</td>
+
+          <td class="duration" data-value="4300427099">4.300</td>
+          <td class="passed">Passed</td>
+        </tr>
+        </tbody>
+
+      </table>
+    </div>
+  </div>
+</div>
+
+
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-1 col-md-offset-10">
+      <i class="fa fa-chevron-circle-down fa-2x collapsable-control"
+        onClick="javascript:$('#report .collapsable-details').collapse('show')"></i>
+      <i class="fa fa-chevron-circle-up fa-2x collapsable-control"
+        onClick="javascript:$('#report .collapsable-details').collapse('hide')"></i>
+    </div>
+  </div>
+</div>
+
+
+<div class="container-fluid" id="report">
+  <div class="row">
+    <div class="col-md-10 col-md-offset-1">
+      <div class="elements">
+
+
+<div class="element">
+    <div class="indention">
+      <b>Feature:</b>
+      <a href="report-feature_782406584.html">src/test/java/APITest.feature</a>
+    </div>
+
+
+<div class="tags indention">
+    <b>Tags:</b>
+       <a href="report-tag_2210145489.html">@test</a>
+</div>
+
+
+  <span class="lead-duration duration">4.300</span>
+
+
+  <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-1">
+
+<div class="brief passed">
+  <span class="keyword indention">Scenario</span>
+  <span class="name">Test users by Name---</span>
+
+
+     <i class="chevron fa fa-fw"></i>
+</div>
+
+  </span>
+  <div class="description indention"></div>
+
+  <div id="element-1" class="collapse collapsable-details ">
+
+
+
+
+
+<div class="steps inner-level">
+  <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#steps-2">
+
+<div class="brief passed">
+  <span class="keyword indention">Steps</span>
+  <span class="name"></span>
+
+
+     <i class="chevron fa fa-fw"></i>
+</div>
+
+  </div>
+
+  <div id="steps-2" class="inner-level collapse collapsable-details ">
+      <div class="step">
+
+
+<div class="brief step-name-Given passed">
+  <span class="keyword indention">Given</span>
+  <span class="name">path '/public-api/users'</span>
+
+  <span class="lead-duration duration">0.001</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-And passed">
+  <span class="keyword indention">And</span>
+  <span class="name">param first_name = 'john'</span>
+
+  <span class="lead-duration duration">0.002</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-When passed">
+  <span class="keyword indention">When</span>
+  <span class="name">method get</span>
+
+  <span class="lead-duration duration">4.282</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+  <div class="inner-level">
+    <div class="docstring indention">
+      <div data-toggle="collapse" class="collapsable-control" data-target="#msg-3">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-3" class="collapse collapsable-details">
+        <pre>13:36:00.088 request:
+1 &gt; GET https://gorest.co.in/public-api/users?first_name=john
+1 &gt; Accept-Encoding: gzip,deflate
+1 &gt; Authorization: Bearer vymTXK9cDHiVxwVgdRcPn3UoDreZ5a-x5ZgR
+1 &gt; Connection: Keep-Alive
+1 &gt; Host: gorest.co.in
+1 &gt; User-Agent: Apache-HttpClient/4.5.11 (Java/1.8.0_251)
+
+13:36:03.799 response time in milliseconds: 3705.23
+1 &lt; 200
+1 &lt; Connection: keep-alive
+1 &lt; Content-Type: application/json; charset=UTF-8
+1 &lt; Date: Thu, 11 Jun 2020 12:36:03 GMT
+1 &lt; Link: &lt;https://gorest.co.in/public-api/users?first_name=john&amp;page=1&gt;; rel=self
+1 &lt; Server: nginx
+1 &lt; Set-Cookie: _csrf=3fa14874feee586084aa1bf9683baeb2b9842abf874e1cec6fc3b07aa875e6caa%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22V0YdwFtES2cZ8LNidcWY1Y8A4HJbB2TK%22%3B%7D; path=/; HttpOnly
+1 &lt; Transfer-Encoding: chunked
+1 &lt; Vary: [Accept-Encoding, Accept]
+1 &lt; X-Frame-Options: sameorigin
+1 &lt; X-Pagination-Current-Page: 1
+1 &lt; X-Pagination-Page-Count: 1
+1 &lt; X-Pagination-Per-Page: 20
+1 &lt; X-Pagination-Total-Count: 2
+1 &lt; X-Rate-Limit-Limit: 30
+1 &lt; X-Rate-Limit-Remaining: 29
+1 &lt; X-Rate-Limit-Reset: 2
+{&quot;_meta&quot;:{&quot;success&quot;:true,&quot;code&quot;:200,&quot;message&quot;:&quot;OK. Everything worked as expected.&quot;,&quot;totalCount&quot;:2,&quot;pageCount&quot;:1,&quot;currentPage&quot;:1,&quot;perPage&quot;:20,&quot;rateLimit&quot;:{&quot;limit&quot;:30,&quot;remaining&quot;:29,&quot;reset&quot;:2}},&quot;result&quot;:[{&quot;id&quot;:&quot;29222&quot;,&quot;first_name&quot;:&quot;Johnnie&quot;,&quot;last_name&quot;:&quot;Williamson&quot;,&quot;gender&quot;:&quot;male&quot;,&quot;dob&quot;:&quot;1947-07-29&quot;,&quot;email&quot;:&quot;tcummings@example.org&quot;,&quot;phone&quot;:&quot;528.224.8355 x56333&quot;,&quot;website&quot;:&quot;https://roberts.com/est-sint-non-temporibus-delectus-esse-totam-dolor.html&quot;,&quot;address&quot;:&quot;9887 Furman Crescent Suite 222\nDickinsonfurt, KS 04599&quot;,&quot;status&quot;:&quot;inactive&quot;,&quot;_links&quot;:{&quot;self&quot;:{&quot;href&quot;:&quot;https://gorest.co.in/public-api/users/29222&quot;},&quot;edit&quot;:{&quot;href&quot;:&quot;https://gorest.co.in/public-api/users/29222&quot;},&quot;avatar&quot;:{&quot;href&quot;:&quot;https://lorempixel.com/250/250/people/?69123&quot;}}},{&quot;id&quot;:&quot;30476&quot;,&quot;first_name&quot;:&quot;Johnson&quot;,&quot;last_name&quot;:&quot;Hettinger&quot;,&quot;gender&quot;:&quot;male&quot;,&quot;dob&quot;:&quot;1942-12-17&quot;,&quot;email&quot;:&quot;maye.olson@example.net&quot;,&quot;phone&quot;:&quot;(532) 240-5733&quot;,&quot;website&quot;:&quot;http://oconner.com/consequatur-natus-fugiat-rerum-quidem&quot;,&quot;address&quot;:&quot;95161 Zelda Ridges Suite 914\nWunschchester, MT 77804&quot;,&quot;status&quot;:&quot;inactive&quot;,&quot;_links&quot;:{&quot;self&quot;:{&quot;href&quot;:&quot;https://gorest.co.in/public-api/users/30476&quot;},&quot;edit&quot;:{&quot;href&quot;:&quot;https://gorest.co.in/public-api/users/30476&quot;},&quot;avatar&quot;:{&quot;href&quot;:&quot;https://lorempixel.com/250/250/people/?62396&quot;}}}]}</pre>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-Then passed">
+  <span class="keyword indention">Then</span>
+  <span class="name">status 200</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-And passed">
+  <span class="keyword indention">And</span>
+  <span class="name">def UserResponse = response</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-And passed">
+  <span class="keyword indention">And</span>
+  <span class="name">def name = 'Deepak'</span>
+
+  <span class="lead-duration duration">0.001</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-Then passed">
+  <span class="keyword indention">Then</span>
+  <span class="name">match UserResponse.result[*].first_name contains [&quot;Johnnie&quot;]</span>
+
+  <span class="lead-duration duration">0.010</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+  </div>
+</div>
+
+
+
+
+
+  </div>
+</div>
+
+
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-1 col-md-offset-10">
+      <i class="fa fa-chevron-circle-down fa-2x collapsable-control"
+        onClick="javascript:$('#report .collapsable-details').collapse('show')"></i>
+      <i class="fa fa-chevron-circle-up fa-2x collapsable-control"
+        onClick="javascript:$('#report .collapsable-details').collapse('hide')"></i>
+    </div>
+  </div>
+</div>
+
+<br/>
+
+<nav class="navbar navbar-default" id="footer">
+  <div class="container-fluid">
+    <p class="navbar-text navbar-right">
+        <small>generate Cucumber HTML reports via:&nbsp;</small>
+        <a class="navbar-link" href="https://github.com/jenkinsci/cucumber-reports-plugin">Jenkins Plugin</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/cucumber-reporting">Standalone</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/cucumber-sandwich">Sandwich</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/maven-cucumber-reporting">Maven</a>
+        &nbsp;&nbsp;
+    </p>
+  </div>
+</nav>
+
+</body>
+</html>

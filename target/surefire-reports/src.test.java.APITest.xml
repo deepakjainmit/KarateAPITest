@@ -1,0 +1,13 @@
+<testsuite failures="0" name="src/test/java/APITest.feature" skipped="0" tests="1" time="4.305266">
+  <testcase classname="src.test.java.APITest" name="Test users by Name---" time="4.305266">
+    <system-out>* url 'https://gorest.co.in' .............................................. passed
+* header Authorization = 'Bearer vymTXK9cDHiVxwVgdRcPn3UoDreZ5a-x5ZgR' .... passed
+Given path '/public-api/users' ............................................ passed
+And param first_name = 'john' ............................................. passed
+When method get ........................................................... passed
+Then status 200 ........................................................... passed
+And def UserResponse = response ........................................... passed
+And def name = 'Deepak' ................................................... passed
+Then match UserResponse.result[*].first_name contains ["Johnnie"] ......... passed</system-out>
+  </testcase>
+</testsuite>
